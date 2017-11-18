@@ -8,7 +8,6 @@ From: shub://trcook/DL_containers:base
     chk_nvidia_uvm=$(grep nvidia_uvm /proc/modules)
 
 
-
     exec /usr/bin/python3 "$@"
 
 %post
