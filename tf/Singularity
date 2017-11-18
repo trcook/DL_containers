@@ -11,7 +11,7 @@ From: shub://trcook/DL_containers:base
     exec /usr/bin/python3 "$@"
 
 %post
-    sudo apt-get install python3-tk
+    apt-get install python3-tk
     # Install TensorFlow GPU version
     pip3 install --upgrade tensorflow-gpu\
     keras\
