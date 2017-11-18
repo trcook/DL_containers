@@ -1,7 +1,7 @@
 
 
 BootStrap: shub
-From: trcook/DL_containers:base
+From: shub://trcook/DL_containers:base
 
 
 %runscript
