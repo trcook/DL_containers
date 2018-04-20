@@ -37,7 +37,7 @@ From:nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
             graphviz && \
             apt clean all
     export LC_ALL=C
-    pip3 install --no-cache-dir --upgrade pip
+    pip3 install --no-cache-dir --upgrade pip==9.0.3
     unset LC_ALL
     pip3 install --no-cache-dir --upgrade future \
         matplotlib \
