@@ -17,8 +17,12 @@ From: shub://trcook/tf:base
     # Install TensorFlow GPU version
     pip3 install --upgrade tensorflow-gpu\
     keras\
-    protobuf
-    #pip3 install --upgrade 
-    # keras
-    #pip3 install --upgrade keras
+    protobuf\
+    tensorforce\
+    snakemake\
+    pandas\
+    anytree\
+    jinja2\
+    ruamel.yaml\
+    gym\
 
