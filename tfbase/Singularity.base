@@ -1,8 +1,6 @@
 bootstrap:docker
 From:nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
-
-
 %environment
 
     LD_LIBRARY_PATH=/host-libs:/usr/local/cuda/extras/CUPTI/lib64:/usr/local/cuda-9.1/lib64
