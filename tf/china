@@ -1,0 +1,55 @@
+
+
+
+
+BootStrap: shub
+From: shub://trcook/tf:base
+
+%runscript
+    chk_nvidia_uvm=$(grep nvidia_uvm /proc/modules)
+
+
+    exec /usr/bin/python3 "$@"
+
+%post
+    apt-get install -y python3-tk
+    # Install TensorFlow GPU version
+    pip3 install --upgrade tensorflow-gpu\
+    keras\
+    protobuf\
+    tensorforce\
+    snakemake\
+    pandas\
+    anytree\
+    jinja2\
+    ruamel.yaml\
+    gym\
+    statsmodels\
+    tzlocal\
+    impyute\
+    fredapi\
+    
+    
+
+    # install R
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+
+    add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
+
+    apt-get update
+
+    apt-get install -y locales
+    
+    locale-gen en_US en_US.UTF-8
+    dpkg-reconfigure locales
+    
+    apt-get install -y r-base
+    Rscript -e "install.packages('Amelia')"
+    Rscript -e "install.packages('data.table')" 
+
+    pip install  rpy2
+
+
+
+
+
